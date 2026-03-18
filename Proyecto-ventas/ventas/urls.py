@@ -20,12 +20,17 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from apps.clientes.views import ClienteViewSet
 from apps.productos.views import ProductoViewSet
+from apps.usuarios.views import UsuarioViewSet
+from apps.cotizacion.views import CotizacionViewSet
 
 router = DefaultRouter()
 router.register(r'cliente', viewset = ClienteViewSet, basename = 'cliente')
 router.register(r'producto', viewset = ProductoViewSet, basename = 'producto')
+router.register(r'cotizacion', viewset = CotizacionViewSet, basename = 'cotizacion')
+router.register(r'usuario', viewset = UsuarioViewSet, basename = 'usuario')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
     path('v1/', include(router.urls))
 ]
