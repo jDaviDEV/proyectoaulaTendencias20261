@@ -35,6 +35,6 @@ creados con django rest framework
 La documentacion de los endpoints se ha realizado usando Swagger. Se puede iniciar
 el servidor con el comando:
 
-`pip install -r requirements.txt `
+`pip install drf-yasg `
 
-Y acceder a la documentacion en el endopint *[http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)*
+Para acceder a la documentacion visite el endopint *[http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)*
