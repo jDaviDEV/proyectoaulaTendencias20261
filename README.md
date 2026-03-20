@@ -6,6 +6,7 @@ Se procede con la ejecucion de los comandos: <br>
 ```
 pip install django <br>
 pip install djangorestframework <br>
+pip install drf-yasg <br>
 pip install markdown
 ```
 
@@ -18,11 +19,22 @@ Para instalar estos paquetes se puede ejecutar el comando
 
 `pip install -r requirements.txt `
 
-Inicialmente se crearon dos modelos:
+Inicialmente se crearon los modelos:
 
 -   Clientes
 -   Productos
+-   Cotizacion
+-   ItemCotizacion
+-   Usuario
+-   Producto
 
 Y para cada uno de ellos un serializer que permite la visualizacion de los datos
 que se encuentran registrados en los modelos a través de un sus respectivos EndPoints
 creados con django rest framework
+
+La documentacion de los endpoints se ha realizado usando Swagger. Se puede iniciar
+el servidor con el comando:
+
+`pip install -r requirements.txt `
+
+Y acceder a la documentacion en el endopint *[http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)*
