@@ -7,7 +7,6 @@ from rest_framework.permissions import IsAuthenticated
  
  
 class UsuarioViewSet(viewsets.ModelViewSet):
- 
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
     authentication_classes = [SessionAuthentication, BasicAuthentication]
