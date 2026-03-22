@@ -23,6 +23,7 @@ from apps.clientes.views import ClienteViewSet
 from apps.productos.views import ProductoViewSet
 from apps.usuarios.views import UsuarioViewSet
 from apps.cotizacion.views import CotizacionViewSet
+from apps.autenticacion.views import LoginView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
@@ -51,6 +52,7 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
+    path('v1/login/', LoginView.as_view(), name='login'),
     path('v1/', include(router.urls))
+    
 ]
